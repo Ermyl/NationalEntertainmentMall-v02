@@ -550,20 +550,56 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-neutral-200">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-600 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>© <span id="y"></span> National Regional Centres</div>
-      <div class="flex items-center gap-4">
-        <a href="#idea" class="hover:text-sky-600">Overview</a>
-        <a href="#plan" class="hover:text-sky-600">Plan</a>
-        <a href="#invest" class="hover:text-sky-600">Invest</a>
-      </div>
+<!-- Footer -->
+<footer class="border-t border-neutral-200 bg-white relative">
+  <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-600 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>© <span id="y"></span> National Regional Centres</div>
+    <div class="flex items-center gap-4">
+      <a href="#idea" class="hover:text-sky-600">Overview</a>
+      <a href="#plan" class="hover:text-sky-600">Plan</a>
+      <a href="#invest" class="hover:text-sky-600">Invest</a>
+      <button onclick="openPrivacy()" class="hover:text-sky-600">Privacy</button>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<!-- Privacy popup -->
+<div id="privacyModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
+  <div class="bg-white max-w-lg mx-4 rounded-2xl p-6 shadow-lg text-neutral-800 relative">
+    <h2 class="text-2xl font-bold mb-3">Privacy Policy</h2>
+    <p class="text-sm mb-3">
+      We collect only the information you choose to share when registering your interest.
+      This data is used solely for project updates and will never be sold or shared.
+    </p>
+    <p class="text-sm mb-3">
+      To remove your information, email 
+      <a href="mailto:remy@i4c.co.nz" class="underline text-sky-600">remy@i4c.co.nz</a>.
+    </p>
+    <div class="text-right mt-4">
+      <button onclick="closePrivacy()" class="px-4 py-2 bg-sky-600 text-white text-sm rounded-lg hover:bg-sky-700">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer scripts -->
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  function openPrivacy() {
+    document.getElementById('privacyModal').classList.remove('hidden');
+    document.getElementById('privacyModal').classList.add('flex');
+  }
+
+  function closePrivacy() {
+    document.getElementById('privacyModal').classList.remove('flex');
+    document.getElementById('privacyModal').classList.add('hidden');
+  }
+
+  // Allow closing by clicking outside the popup
+  document.getElementById('privacyModal').addEventListener('click', (e) => {
+    if (e.target.id === 'privacyModal') closePrivacy();
+  });
+</script>
+
 </body>
 </html>
