@@ -96,13 +96,15 @@
         </ul>
       </div>
 
-     <!-- Right column: clickable map with rounded corners -->
-<div class="overflow-hidden cursor-pointer" onclick="openImageModal('./FTG-Regional-Mall.jpg')">
-  <img 
-    src="./FTG-Regional-Mall.jpg" 
-    alt="Map of nine regional hubs across New Zealand" 
-    class="w-full h-auto rounded-2xl transition-transform duration-300 hover:scale-[1.02]" 
-    loading="lazy">
+    <!-- Right column: rounded map, fixed ratio, fully visible -->
+<div class="rounded-2xl overflow-hidden cursor-pointer bg-white" onclick="openImageModal('./FTG-Regional-Mall.jpg')">
+  <div class="aspect-[4/3] flex items-center justify-center">
+    <img 
+      src="./FTG-Regional-Mall.jpg" 
+      alt="Map of nine regional hubs across New Zealand" 
+      class="max-w-full max-h-full object-contain rounded-2xl transition-transform duration-300 hover:scale-[1.02]" 
+      loading="lazy">
+  </div>
 </div>
 
       </div>
