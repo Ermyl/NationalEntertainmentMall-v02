@@ -75,12 +75,18 @@
 </section>
 
 
-  <!-- The Idea -->
-  <section id="idea" class="py-16 border-b border-neutral-200">
-    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10 items-start">
+<!-- The Idea -->
+<section id="idea" class="py-16 border-b border-neutral-200">
+  <div class="mx-auto max-w-6xl px-4 space-y-10">
+
+    <!-- Two-column layout -->
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- Left column -->
       <div>
         <h2 class="text-2xl font-bold">The idea</h2>
-        <p class="mt-4 text-neutral-700">A national network of destination-scale shopping and entertainment centres that combine retail, leisure, clean energy, and transport in one place. Each centre is designed as an all-day experience — shop, dine, watch a movie, bowl or skate, test-drive a car, and charge your EV while you’re here.</p>
+        <p class="mt-4 text-neutral-700">
+          A national network of destination-scale shopping and entertainment centres that combine retail, leisure, clean energy, and transport in one place. Each centre is designed as an all-day experience — shop, dine, watch a movie, bowl or skate, test-drive a car, and charge your EV while you’re here.
+        </p>
         <ul class="mt-6 space-y-2 text-neutral-800">
           <li>• <strong>Scale:</strong> 150–200,000 m² | 350–400 stores</li>
           <li>• <strong>Energy:</strong> ~20 MW rooftop solar | ~1,000 EV chargers</li>
@@ -88,29 +94,42 @@
           <li>• <strong>Build:</strong> fast large-span system (Formsteel)</li>
         </ul>
       </div>
-      <div class="rounded-2xl border border-neutral-200 p-6">
-        <h3 class="font-semibold">Headlines</h3>
-        <div class="mt-4 grid grid-cols-2 md:grid-cols-2 gap-4 text-sm">
-          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-            <div class="text-3xl font-extrabold">9</div>
-            <div>Regional hubs</div>
-          </div>
-          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-            <div class="text-3xl font-extrabold">20 MW</div>
-            <div>Solar per site</div>
-          </div>
-          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-            <div class="text-3xl font-extrabold">1,000</div>
-            <div>EV chargers / site</div>
-          </div>
-          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-            <div class="text-3xl font-extrabold">Top 20</div>
-            <div>Australasia by size</div>
-          </div>
+
+      <!-- Right column: map -->
+      <div class="rounded-2xl overflow-hidden border border-neutral-200">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img 
+            src="./FTG-Regional-Mall.jpg" 
+            alt="Map of nine regional hubs across New Zealand" 
+            class="w-full h-full object-cover" 
+            loading="lazy">
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Metrics cards below -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+      <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
+        <div class="text-3xl font-extrabold">9</div>
+        <div>Regional hubs</div>
+      </div>
+      <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
+        <div class="text-3xl font-extrabold">20 MW</div>
+        <div>Solar per site</div>
+      </div>
+      <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
+        <div class="text-3xl font-extrabold">1,000</div>
+        <div>EV chargers / site</div>
+      </div>
+      <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
+        <div class="text-3xl font-extrabold">Top 20</div>
+        <div>Australasia by size</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Why It Exists (Community benefits) -->
   <section id="why-exists" class="py-16">
