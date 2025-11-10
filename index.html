@@ -76,12 +76,12 @@
 
 
 <!-- The Idea -->
-<section id="idea" class="py-16 border-b border-neutral-200 relative">
-  <div class="mx-auto max-w-6xl px-4 space-y-10">
+<section id="idea" class="py-16 border-b border-neutral-200">
+  <div class="mx-auto max-w-6xl px-4 space-y-12">
 
     <!-- Two-column layout -->
     <div class="grid md:grid-cols-2 gap-10 items-start">
-      
+
       <!-- Left column -->
       <div>
         <h2 class="text-2xl font-bold">The idea</h2>
@@ -96,19 +96,20 @@
         </ul>
       </div>
 
-<!-- Right column: clickable map -->
-<div class="rounded-2xl border border-neutral-200 overflow-hidden cursor-pointer" onclick="openImageModal('./FTG-Regional-Mall.jpg')">
-  <div class="aspect-[4/3] bg-neutral-100 flex items-center justify-center">
-    <img 
-      src="./FTG-Regional-Mall.jpg" 
-      alt="Map of nine regional hubs across New Zealand" 
-      class="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105" 
-      loading="lazy">
-  </div>
-</div>
+      <!-- Right column: map (white background, no border) -->
+      <div class="rounded-2xl overflow-hidden bg-white cursor-pointer" onclick="openImageModal('./FTG-Regional-Mall.jpg')">
+        <div class="aspect-[4/3] flex items-center justify-center">
+          <img 
+            src="./FTG-Regional-Mall.jpg" 
+            alt="Map of nine regional hubs across New Zealand" 
+            class="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105" 
+            loading="lazy">
+        </div>
+      </div>
+    </div>
 
-    <!-- Metrics cards below -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+    <!-- Cards section below -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm pt-4">
       <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
         <div class="text-3xl font-extrabold">9</div>
         <div>Regional hubs</div>
@@ -127,14 +128,14 @@
       </div>
     </div>
 
-    <!-- Modal inside this section -->
+    <!-- Modal -->
     <div id="ideaImageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
       <img id="ideaModalImg" src="" alt="Expanded map view" class="max-w-full max-h-full rounded-lg shadow-lg">
     </div>
 
   </div>
 
-  <!-- Modal script -->
+  <!-- Script -->
   <script>
     function openImageModal(src) {
       const modal = document.getElementById('ideaImageModal');
@@ -151,6 +152,7 @@
     });
   </script>
 </section>
+
 
 
 
