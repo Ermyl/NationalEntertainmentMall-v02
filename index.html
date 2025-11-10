@@ -76,11 +76,12 @@
 
 
 <!-- The Idea -->
-<section id="idea" class="py-16 border-b border-neutral-200">
+<section id="idea" class="py-16 border-b border-neutral-200 relative">
   <div class="mx-auto max-w-6xl px-4 space-y-10">
 
     <!-- Two-column layout -->
     <div class="grid md:grid-cols-2 gap-10 items-start">
+      
       <!-- Left column -->
       <div>
         <h2 class="text-2xl font-bold">The idea</h2>
@@ -95,13 +96,13 @@
         </ul>
       </div>
 
-      <!-- Right column: map -->
-      <div class="rounded-2xl overflow-hidden border border-neutral-200">
+      <!-- Right column: clickable map -->
+      <div class="rounded-2xl overflow-hidden border border-neutral-200 cursor-pointer" onclick="openImageModal('./FTG-Regional-Mall.jpg')">
         <div class="aspect-[4/3] overflow-hidden">
           <img 
             src="./FTG-Regional-Mall.jpg" 
             alt="Map of nine regional hubs across New Zealand" 
-            class="w-full h-full object-cover" 
+            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
             loading="lazy">
         </div>
       </div>
@@ -127,8 +128,31 @@
       </div>
     </div>
 
+    <!-- Modal inside this section -->
+    <div id="ideaImageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+      <img id="ideaModalImg" src="" alt="Expanded map view" class="max-w-full max-h-full rounded-lg shadow-lg">
+    </div>
+
   </div>
+
+  <!-- Modal script -->
+  <script>
+    function openImageModal(src) {
+      const modal = document.getElementById('ideaImageModal');
+      const img = document.getElementById('ideaModalImg');
+      img.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    document.getElementById('ideaImageModal').addEventListener('click', () => {
+      const modal = document.getElementById('ideaImageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    });
+  </script>
 </section>
+
 
 
   <!-- Why It Exists (Community benefits) -->
