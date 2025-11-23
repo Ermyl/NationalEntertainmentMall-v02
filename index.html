@@ -423,54 +423,96 @@
 
 <!-- Flagship Hamilton -->
 <section id="hamilton" class="py-16 border-t border-neutral-200 relative">
+  <div class="mx-auto max-w-6xl px-4 space-y-10">
 
-  <div class="mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-start">
-    
-    <!-- Text -->
-    <div class="space-y-4">
+    <!-- Title -->
+    <div>
       <h2 class="text-2xl font-bold">Flagship: Hamilton</h2>
-      <p class="text-neutral-700">
-        Drawings complete. Flagship site ready for partner discussions. Designed as an all-day destination with anchor tenants, entertainment spine, EV supercharging, and a public-transport interchange.
-      </p>
-      <ul class="text-neutral-800 space-y-2">
-        <li>• Catchment ≈ strong Waikato growth corridor</li>
-        <li>• Option structure in place (details under NDA)</li>
-        <li>• Target anchors: IKEA | Costco | New supermarket entrant | IMAX</li>
-        <li>• Energy JV pathway with major power generator/retailer</li>
-      </ul>
     </div>
 
-    <!-- Image -->
-    <div class="rounded-2xl overflow-hidden border border-neutral-200 cursor-pointer" onclick="openImageModal('./hamilton-masterplan.jpg')">
-      <div class="aspect-[4/3] overflow-hidden">
-        <img 
-          src="./hamilton-masterplan.jpg" 
-          alt="Hamilton flagship masterplan" 
-          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
-          loading="lazy">
+    <!-- Two-column text -->
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Left: intro paragraph -->
+      <div>
+        <p class="text-neutral-700">
+          Drawings complete. Flagship site ready for partner discussions. Designed as
+          an all-day destination with anchor tenants, entertainment spine, EV
+          supercharging, and a public-transport interchange.
+        </p>
+      </div>
+
+      <!-- Right: bullet list -->
+      <div>
+        <ul class="text-neutral-800 space-y-2">
+          <li>• Catchment ≈ strong Waikato growth corridor</li>
+          <li>• Option structure in place (details under NDA)</li>
+          <li>• Target anchors: IKEA | Costco | New supermarket entrant | IMAX</li>
+          <li>• Energy JV pathway with major power generator/retailer</li>
+        </ul>
       </div>
     </div>
-  </div>
 
-<!-- Concept Perspective — AI-Augmented -->
-<div class="mt-10">
-  <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-neutral-200">
-    <img 
-      src="./hamilton-perspective.jpg" 
-      alt="Concept Perspective — AI-Augmented" 
-      class="w-full h-auto object-cover"
-      loading="lazy"
-    />
-  </div>
-  <p class="text-sm text-neutral-500 mt-2 text-center">
-    Concept Perspective — AI-Augmented
-  </p>
-</div>
+    <!-- Two image cards -->
+    <div class="grid md:grid-cols-2 gap-6">
 
+      <!-- Masterplan card -->
+      <div
+        class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
+        onclick="openImageModal('./hamilton-masterplan.jpg')"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="./hamilton-masterplan.jpg"
+            alt="Hamilton flagship masterplan"
+            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4 border-t border-neutral-200">
+          <p class="text-sm font-semibold text-neutral-800">Masterplan layout</p>
+          <p class="text-xs text-neutral-500 mt-1">
+            Working site plan — indicative only.
+          </p>
+        </div>
+      </div>
+
+      <!-- Perspective card -->
+      <div
+        class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
+        onclick="openImageModal('./hamilton-perspective.jpg')"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="./hamilton-perspective.jpg"
+            alt="Concept Perspective — AI-Augmented"
+            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4 border-t border-neutral-200">
+          <p class="text-sm font-semibold text-neutral-800">
+            Concept Perspective — AI-Augmented
+          </p>
+          <p class="text-xs text-neutral-500 mt-1">
+            Illustrative aerial view — not final architecture.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Modal inside this section -->
-  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
-    <img id="modalImg" src="" alt="Expanded view" class="max-w-full max-h-full rounded-lg shadow-lg">
+  <div
+    id="imageModal"
+    class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4"
+  >
+    <img
+      id="modalImg"
+      src=""
+      alt="Expanded view"
+      class="max-w-full max-h-full rounded-lg shadow-lg"
+    />
   </div>
 
   <script>
@@ -490,24 +532,6 @@
   </script>
 </section>
 
-
-  <!-- Partners & Delivery -->
-  <section class="py-16">
-    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-6">
-      <div class="rounded-2xl border border-neutral-200 p-6">
-        <h3 class="font-semibold">Delivery model</h3>
-        <p class="mt-3 text-neutral-700">Fast-Track Approval (FTA) pathway with land under option to de-risk acquisition. Standardised large-span build system (Formsteel) for speed and cost control.</p>
-      </div>
-      <div class="rounded-2xl border border-neutral-200 p-6">
-        <h3 class="font-semibold">Energy & EV</h3>
-        <p class="mt-3 text-neutral-700">~20 MW rooftop solar enabling ~1,000 concurrent EV charges. JV discussions with major power generator/retailer Energy for rollout and operations.</p>
-      </div>
-      <div class="rounded-2xl border border-neutral-200 p-6">
-        <h3 class="font-semibold">Entertainment spine</h3>
-        <p class="mt-3 text-neutral-700">IMAX + multiplex, 36-lane bowling, ice / roller rinks in selected cities, flight & motorsport simulators.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- Investment Overview -->
   <section id="invest" class="py-16 border-t border-neutral-200">
