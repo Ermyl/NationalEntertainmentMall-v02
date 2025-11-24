@@ -533,86 +533,88 @@
         </ul>
       </div>
     </div>
+<!-- Two image cards -->
+<div class="grid md:grid-cols-2 gap-6 mb-2">
 
-    <!-- Two image cards -->
-    <div class="grid md:grid-cols-2 gap-6 mb-2">
-
-      <!-- Masterplan card -->
-      <div
-        class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
-        onclick="openImageModal('./hamilton-masterplan.jpg')"
-      >
-        <div class="aspect-[4/3] overflow-hidden">
-          <img
-            src="./hamilton-masterplan.jpg"
-            alt="Hamilton flagship masterplan"
-            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-4 border-t border-neutral-200">
-          <p class="text-sm font-semibold text-neutral-800">Masterplan layout</p>
-          <p class="text-xs text-neutral-500 mt-1">
-            Working site plan — indicative only.
-          </p>
-        </div>
-      </div>
-
-      <!-- Perspective card -->
-      <div
-        class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
-        onclick="openImageModal('./hamilton-perspective.jpg')"
-      >
-        <div class="aspect-[4/3] overflow-hidden">
-          <img
-            src="./hamilton-perspective.jpg"
-            alt="Concept Perspective — AI-Augmented"
-            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-4 border-t border-neutral-200">
-          <p class="text-sm font-semibold text-neutral-800">
-            Concept Perspective — AI-Augmented
-          </p>
-          <p class="text-xs text-neutral-500 mt-1">
-            Illustrative aerial view — not final architecture.
-          </p>
-        </div>
-      </div>
-
+  <!-- Masterplan card -->
+  <div
+    class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
+    onclick="openImageModal('./hamilton-masterplan.jpg')"
+  >
+    <div class="aspect-[4/3] overflow-hidden">
+      <img
+        src="./hamilton-masterplan.jpg"
+        alt="Hamilton flagship masterplan"
+        class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+        loading="lazy"
+      />
+    </div>
+    <div class="p-4 border-t border-neutral-200">
+      <p class="text-sm font-semibold text-neutral-800">Masterplan layout</p>
+      <p class="text-xs text-neutral-500 mt-1">
+        Working site plan — indicative only.
+      </p>
     </div>
   </div>
 
-  <!-- Modal inside this section -->
+  <!-- Perspective card -->
   <div
-    id="imageModal"
-    class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4"
+    class="rounded-2xl overflow-hidden border border-neutral-200 bg-white cursor-pointer"
+    onclick="openImageModal('./hamilton-perspective.jpg')"
   >
-    <img
-      id="modalImg"
-      src=""
-      alt="Expanded view"
-      class="max-w-full max-h-full rounded-lg shadow-lg"
-    />
+    <!-- CHANGED: aspect-[3/2] instead of aspect-[4/3] -->
+    <div class="aspect-[3/2] overflow-hidden">
+      <img
+        src="./hamilton-perspective.jpg"
+        alt="Concept Perspective — AI-Augmented"
+        class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+        loading="lazy"
+      />
+    </div>
+    <div class="p-4 border-t border-neutral-200">
+      <p class="text-sm font-semibold text-neutral-800">
+        Concept Perspective — AI-Augmented
+      </p>
+      <p class="text-xs text-neutral-500 mt-1">
+        Illustrative aerial view — not final architecture.
+      </p>
+    </div>
   </div>
 
-  <script>
-    function openImageModal(src) {
-      const modal = document.getElementById('imageModal');
-      const img = document.getElementById('modalImg');
-      img.src = src;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
+</div>
+</div>
 
-    document.getElementById('imageModal').addEventListener('click', () => {
-      const modal = document.getElementById('imageModal');
-      modal.classList.remove('flex');
-      modal.classList.add('hidden');
-    });
-  </script>
+<!-- Modal inside this section -->
+<div
+  id="imageModal"
+  class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4"
+>
+  <!-- CHANGED: constrained size -->
+  <img
+    id="modalImg"
+    src=""
+    alt="Expanded view"
+    class="rounded-lg shadow-lg max-w-[80vw] max-h-[60vh] object-contain"
+  />
+</div>
+
+<script>
+  function openImageModal(src) {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImg');
+    img.src = src;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  document.getElementById('imageModal').addEventListener('click', () => {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  });
+</script>
 </section>
+
 
  <!-- Partners & Delivery -->
   <section class="pt-0 pb-16">
